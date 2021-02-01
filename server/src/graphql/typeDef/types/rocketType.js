@@ -14,8 +14,9 @@ const rocketType = gql`
         rocket_name: String
         rocket_id: String
         rocket_type: String
-        engines: Engines!
-        flickr_images: [FlickrImages!]!
+        engines: Engines
+        flickr_images: [String]
+        description: String
       }
 
     type Engines{
@@ -29,10 +30,6 @@ const rocketType = gql`
     type ThrustVacuum{
         kN: Int
         lbf: Int
-    }
-
-    type FlickrImages{
-        images: String
     }
 `
 module.exports = {rocketType,}
