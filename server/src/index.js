@@ -5,6 +5,9 @@ const { typeDefs } = require('./graphql/typeDef')
 const server = new ApolloServer({
     typeDefs,
     resolvers,
+    formatError: (err) => {
+      return new Error(`API responded with error code: ${err.extensions.code}`)
+    },
     context: async ({ req }) => {
       const auth = req ? req.headers.authorization : null
       if (auth && auth.toLocaleLowerCase().startsWith('bearer')) {
