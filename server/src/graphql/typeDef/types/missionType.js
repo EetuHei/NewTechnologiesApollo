@@ -1,4 +1,4 @@
-const {gql} = require('apollo-server')
+const { gql } = require('apollo-server')
 
 // define what data you can query for rockets
 const missionType = gql`
@@ -13,4 +13,4 @@ const missionType = gql`
         description: String
       }
 `
-module.exports = {missionType,}
+module.exports = { missionType, }

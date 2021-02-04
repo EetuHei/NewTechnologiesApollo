@@ -1,5 +1,5 @@
 const { getRocketsData, getRocketDataById } = require('./rockets')
-const {getMissionsData} = require('./missions')
+const { getMissionsData } = require('./missions')
 
 const resolvers = {
   Query: {

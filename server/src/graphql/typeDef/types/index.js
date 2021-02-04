@@ -1,4 +1,4 @@
-const {rocketType} = require('./rocketType')
-const {missionType} = require('./missionType')
+const { rocketType } = require('./rocketType')
+const { missionType } = require('./missionType')
 
-module.exports = {rocketType,missionType}
+module.exports = { rocketType,missionType }
