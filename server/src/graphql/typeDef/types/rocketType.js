@@ -1,4 +1,4 @@
-const {gql} = require('apollo-server')
+const { gql } = require('apollo-server')
 
 // define what data you can query for rockets
 const rocketType = gql`
@@ -24,7 +24,7 @@ const rocketType = gql`
         type: String
         version: String
         layout: String
-        thrust_vacuum: ThrustVacuum!
+        thrust_vacuum: ThrustVacuum
     }
       
     type ThrustVacuum{
@@ -32,4 +32,5 @@ const rocketType = gql`
         lbf: Int
     }
 `
-module.exports = {rocketType,}
+
+module.exports = { rocketType, }

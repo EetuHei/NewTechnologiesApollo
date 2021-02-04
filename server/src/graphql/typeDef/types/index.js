@@ -1,3 +1,3 @@
-const {rocketType} = require('./rocketType')
+const { rocketType } = require('./rocketType')
 
-module.exports = {rocketType,}
+module.exports = { rocketType }
