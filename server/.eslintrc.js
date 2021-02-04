@@ -1,20 +1,14 @@
 // eslint-disable-next-line no-undef
 module.exports = {
   env: {
-    browser: true,
-    es6: true,
-    'jest/globals': true,
+    es2020: true,
+    node: true
   },
-  extends: ['eslint:recommended', 'plugin:react/recommended'],
+  extends: 'eslint:recommended',
   parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
-    },
     ecmaVersion: 2020,
-    sourceType: 'module',
+    sourceType: 'module'
   },
-  plugins: ['react', 'jest'],
-  settings: { react: { version: 'detect' } },
   rules: {
     indent: ['error', 2],
     'linebreak-style': ['error', 'windows'],
@@ -25,6 +19,5 @@ module.exports = {
     'object-curly-spacing': ['error', 'always'],
     'arrow-spacing': ['error', { before: true, after: true }],
     'no-console': 0,
-    'react/prop-types': 0,
   },
 }
