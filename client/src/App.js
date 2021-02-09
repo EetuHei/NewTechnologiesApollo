@@ -1,4 +1,4 @@
-import React from 'react'
+import { React, useEffect, useState } from 'react'
 import {
   useQuery,
 } from '@apollo/client'
@@ -8,15 +8,30 @@ import Rocket from './components/Rocket'
 
 const App = () => {
   const result = useQuery(ALL_ROCKETS)
+  const [initalData, setInitialData] = useState([])
+
+  useEffect(() => {
+    if(result.data){
+      setInitialData(result.data.getRocket)
+      localStorage.setItem('intialData', JSON.stringify(result.data))
+    }
+  })
 
   if (result.loading) {
     return <div>loading...</div>
   }
 
+  if (initalData.length === 0) {
+    console.error('failed to fetch... setting data from local storage')
+    const dataInStore = JSON.parse(localStorage.getItem('intialData'))
+    setInitialData(dataInStore)
+  }
+
+
   return (
     <div>
-      <p>React app js</p>
-      <Rocket rockets = {result.data.getRocket}/>
+      <h1>Space Rockets</h1>
+      <Rocket rockets = {initalData.getRocket}/>
     </div>
   )
 }
