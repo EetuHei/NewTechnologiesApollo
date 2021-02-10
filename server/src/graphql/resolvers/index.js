@@ -1,11 +1,12 @@
 const { getRocketsData, getRocketDataById } = require('./rockets')
-const { getMissionsData } = require('./missions')
+const { getMissionsData, getMissionDataByName } = require('./missions')
 
 const resolvers = {
   Query: {
     getRocket: () => getRocketsData(),
     getRocketDataById: (root, args) => getRocketDataById(args.rocket_id),
-    getMissions: () => getMissionsData()
+    getMissions: () => getMissionsData(),
+    getMissionDataByName: (root, args) => getMissionDataByName(args.mission_id)
   },
 }
 
