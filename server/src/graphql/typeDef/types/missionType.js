@@ -1,6 +1,6 @@
 const { gql } = require('apollo-server')
 
-// define what data you can query for rockets
+// define what data you can query for missions
 const missionType = gql`
   type Mission{
         mission_name: String
