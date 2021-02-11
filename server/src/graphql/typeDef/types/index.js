@@ -1,3 +1,4 @@
 const { rocketType } = require('./rocketType')
+const { missionType } = require('./missionType')
 
-module.exports = { rocketType }
+module.exports = { rocketType,missionType }
