@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-
+import { BrowserRouter } from 'react-router-dom'
 import { ApolloClient, ApolloProvider, HttpLink, InMemoryCache, gql } from '@apollo/client'
 
 const client = new ApolloClient({
@@ -27,11 +27,9 @@ const query = gql`
       thrust_vacuum {
         kN
         lbf
-        __typename
       }
       type
       version
-      __typename
     }
     first_flight
     flickr_images
@@ -40,19 +38,31 @@ const query = gql`
     rocket_type
     success_rate_pct
 }
+getMissions{
+  mission_name
+  mission_id
+  manufacturers
+  payload_ids
+  wikipedia
+  website
+  twitter
+  description
+}
  }
 `
 
 client.query({ query })
   .then((response) => {
-    console.log(response.data, 'initial res from server')
+    console.log(response.data, 'initial response from server')
   }).catch(e => {
     console.error(e)
   })
 
 ReactDOM.render(
-  <ApolloProvider client={client}>
-    <App />
-  </ApolloProvider>,
+  <BrowserRouter>
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
+  </BrowserRouter>,
   document.getElementById('root')
 )
