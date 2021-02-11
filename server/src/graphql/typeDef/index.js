@@ -1,9 +1,10 @@
 const { query } = require('./query')
-const { rocketType } = require('./types')
+const { rocketType, missionType } = require('./types')
 
 const typeDefs = [
   query,
   rocketType,
+  missionType
 ]
 
 module.exports = {
