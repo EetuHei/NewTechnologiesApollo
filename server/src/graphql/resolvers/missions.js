@@ -5,7 +5,7 @@ const getMissionsData = async () => {
   const res = await fetchData('missions')
   return res
 }
-const getMissionDataByName = async (args) => {
+const getMissionDataById = async (args) => {
   // fetch data from baseURL/missions
   const res = await fetchData(`missions/${args}`)
   return res
@@ -13,5 +13,5 @@ const getMissionDataByName = async (args) => {
 
 
 module.exports = {
-  getMissionsData, getMissionDataByName
+  getMissionsData, getMissionDataById
 }
