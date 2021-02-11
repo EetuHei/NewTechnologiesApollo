@@ -14,7 +14,6 @@ const App = () => {
   useEffect(() => {
     if(result.data){
       setInitialData(result.data)
-      localStorage.setItem('intialData', JSON.stringify(result.data))
     }
   }, [])
 

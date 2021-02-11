@@ -27,11 +27,9 @@ const query = gql`
       thrust_vacuum {
         kN
         lbf
-        __typename
       }
       type
       version
-      __typename
     }
     first_flight
     flickr_images
@@ -40,12 +38,23 @@ const query = gql`
     rocket_type
     success_rate_pct
 }
+getMissions{
+  mission_name
+  mission_id
+  manufacturers
+  payload_ids
+  wikipedia
+  website
+  twitter
+  description
+}
  }
 `
 
 client.query({ query })
   .then((response) => {
     console.log(response.data, 'initial response from server')
+    localStorage.setItem('intialData', JSON.stringify(response.data))
   }).catch(e => {
     console.error(e)
   })
