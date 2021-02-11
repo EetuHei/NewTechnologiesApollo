@@ -54,7 +54,6 @@ getMissions{
 client.query({ query })
   .then((response) => {
     console.log(response.data, 'initial response from server')
-    localStorage.setItem('intialData', JSON.stringify(response.data))
   }).catch(e => {
     console.error(e)
   })
