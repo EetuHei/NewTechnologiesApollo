@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
-
+import { BrowserRouter } from 'react-router-dom'
 import { ApolloClient, ApolloProvider, HttpLink, InMemoryCache, gql } from '@apollo/client'
 
 const client = new ApolloClient({
@@ -45,14 +45,16 @@ const query = gql`
 
 client.query({ query })
   .then((response) => {
-    console.log(response.data, 'initial res from server')
+    console.log(response.data, 'initial response from server')
   }).catch(e => {
     console.error(e)
   })
 
 ReactDOM.render(
-  <ApolloProvider client={client}>
-    <App />
-  </ApolloProvider>,
+  <BrowserRouter>
+    <ApolloProvider client={client}>
+      <App />
+    </ApolloProvider>
+  </BrowserRouter>,
   document.getElementById('root')
 )
