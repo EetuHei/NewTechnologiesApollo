@@ -29,6 +29,18 @@ const ROCKET_DETAILS = gql`
     success_rate_pct
   }
 `
+const MISSION_DETAILS = gql`
+  fragment MissionDetails on Mission{
+    mission_name
+    mission_id
+    manufacturers
+    payload_ids
+    wikipedia
+    website
+    twitter
+    description
+  }
+`
 
 export const ALL_ROCKETS = gql`
 query{
@@ -37,4 +49,13 @@ query{
   }
 }
 ${ROCKET_DETAILS}
+`
+
+export const ALL_MISSIONS = gql`
+query{
+  getMissions{
+    ...MissionDetails
+  }
+}
+${MISSION_DETAILS}
 `
