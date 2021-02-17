@@ -59,3 +59,18 @@ query{
 }
 ${MISSION_DETAILS}
 `
+
+export const GET_MISSION_BY_ID = gql`
+  query getMissionDataById($mission_id: String!) {
+    getMissionDataById(mission_id: $mission_id) {
+      mission_name
+      mission_id
+      manufacturers
+      payload_ids
+      wikipedia
+      website
+      twitter
+      description
+    }
+  }
+`

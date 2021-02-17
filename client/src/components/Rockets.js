@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Rocket = ({ rockets }) => {
+const Rockets = ({ rockets }) => {
   console.log(rockets, 'rockets data')
   return(
     <div>
@@ -12,4 +12,4 @@ const Rocket = ({ rockets }) => {
   )
 }
 
-export default Rocket
+export default Rockets
