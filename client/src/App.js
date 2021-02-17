@@ -4,7 +4,6 @@ import {
   useQuery,
 } from '@apollo/client'
 import { ALL_MISSIONS, ALL_ROCKETS } from './service/queries'
-
 import { Rockets, Rocket, Mission } from './components/index'
 
 const App = () => {
