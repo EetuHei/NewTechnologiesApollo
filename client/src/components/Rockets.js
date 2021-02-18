@@ -1,12 +1,14 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 const Rockets = ({ rockets }) => {
-  console.log(rockets, 'rockets data')
+
   return(
     <div>
       <p>Rocket launch country</p>
       {rockets.map((data) => (
-        <p key={data.id}>{data.country}</p>
+        <div key={data.id}>
+          <Link to={`/rockets/${data.rocket_id}`}><p>{data.country}</p></Link>
+        </div>
       ))}
     </div>
   )

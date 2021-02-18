@@ -4,9 +4,7 @@ import {
   useQuery,
 } from '@apollo/client'
 import { ALL_MISSIONS, ALL_ROCKETS } from './service/queries'
-import Rockets from './components/Rockets'
-import Missions from './components/Missions'
-import Mission from './components/Mission'
+import { Rockets, Rocket, Missions, Mission } from './components/index'
 
 const App = () => {
   const result = useQuery(ALL_ROCKETS)
@@ -38,6 +36,7 @@ const App = () => {
       </Route>
       <Switch>
         <Route exact path="/rockets" render={() => <Rockets rockets = {result.data.getRocket} />} />
+        <Route exact path="/rockets/:id"  render={() => <Rocket/>} />
         <Route exact path="/missions" render={() => <Missions missions = {resultMission.data.getMissions} />} />
         <Route exact path="/missions/:id"  render={() => <Mission/>} />
       </Switch>
