@@ -2,7 +2,7 @@ const { gql } = require('apollo-server')
 
 const query = gql`
     type Query{
-        me: User
+        Me: User
         getRocket: [Rocket]!
         getRocketDataById(rocket_id: String!): Rocket!
         getMissions: [Mission]!
