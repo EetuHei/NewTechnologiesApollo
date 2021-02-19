@@ -6,7 +6,7 @@ const server = new ApolloServer({
   typeDefs,
   resolvers,
   formatError: (err) => {
-    return new Error(`API responded with error code: ${err.extensions.code}`)
+    return new Error(`API responded with error code: ${err.message}`)
   },
 })
 
