@@ -1,6 +1,6 @@
 const { gql } = require('apollo-server')
 
-// define what data you can query for rockets
+// define what type data User & token requires
 const userType = gql`
 type User {
     username: String!
