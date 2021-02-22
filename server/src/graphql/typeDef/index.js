@@ -1,10 +1,13 @@
 const { query } = require('./query')
-const { rocketType, missionType } = require('./types')
+const { mutation } = require('./mutation')
+const { rocketType, missionType, userType } = require('./types')
 
 const typeDefs = [
   query,
+  mutation,
   rocketType,
-  missionType
+  missionType,
+  userType
 ]
 
 module.exports = {
