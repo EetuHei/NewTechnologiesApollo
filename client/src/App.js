@@ -56,12 +56,12 @@ const App = () => {
             </Grid>
             <Grid item xs={6}>
               <Link to="/rockets">
-                <img src={result.data.getRocket[0].flickr_images[1]} width="50%" height="300px" style={ { marginLeft:'auto', marginRight:'auto', display:'block' } }></img>
+                <img src={result.data.getRocket[0].flickr_images[1]} width="80%" height="80%" style={ { marginLeft:'auto', marginRight:'auto', display:'block' } }></img>
               </Link>
             </Grid>
             <Grid item xs={6}>
               <Link to="/missions">
-                <img src={ Picture } height="300px" width="50%" style={ { marginLeft:'auto', marginRight:'auto', display:'block' } }></img>
+                <img src={ Picture } height="80%" width="80%" style={ { marginLeft:'auto', marginRight:'auto', display:'block' } }></img>
               </Link>
             </Grid>
           </Route>

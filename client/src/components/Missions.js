@@ -10,9 +10,13 @@ const Missions = ({ missions }) => {
       <Grid container spacing={0} direction="row" alignContent="center" justify="center">
         {missions.map((data) => (
           <div key={data.id}>
-            <Link to={`/missions/${data.mission_id}`}>
+            <Link to={`/missions/${data.mission_id}`} style={ { textDecoration:'none' } }>
               <Grid item xs={12} style={ { margin:'10px' } }>
-                <Button size ="medium" variant="contained" color="secondary" style={ { textDecoration:'underline' } }>{data.mission_name}</Button>
+                <Button size ="medium" variant="contained" color="secondary">
+                  <Typography variant='subtitle1'>
+                    {data.mission_name}
+                  </Typography>
+                </Button>
               </Grid>
             </Link>
           </div>

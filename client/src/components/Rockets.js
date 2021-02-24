@@ -10,9 +10,13 @@ const Rockets = ({ rockets }) => {
       <Grid container spacing={0} direction="row" alignContent="center" justify="center">
         {rockets.map((data) => (
           <div key={data.id}>
-            <Link to={`/rockets/${data.rocket_id}`}>
+            <Link to={`/rockets/${data.rocket_id}`} style={ { textDecoration:'none' } }>
               <Grid item xs={12} style={ { margin:'10px' } }>
-                <Button size ="medium" variant="contained" color="secondary" style={ { textDecoration:'underline' } }>{data.rocket_name}</Button>
+                <Button size ="medium" variant="contained" color="secondary">
+                  <Typography variant='subtitle1'>
+                    {data.rocket_name}
+                  </Typography>
+                </Button>
               </Grid>
             </Link>
           </div>

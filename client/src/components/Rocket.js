@@ -7,7 +7,7 @@ const Rocket = () => {
   let { id } = useParams()
   const result = useQuery(GET_ROCKET_BY_ID, { variables: { rocket_id: id } } )
 
-  if(result.loading)return('Loading...')
+  if(result.loading)return <div>loading...</div>
 
   return(
     <div>

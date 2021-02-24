@@ -8,7 +8,7 @@ const Mission = () => {
 
   const result = useQuery(GET_MISSION_BY_ID, { variables: { mission_id: id } } )
 
-  if(result.loading)return('Loading...')
+  if(result.loading)return <div>loading...</div>
 
   return(
     <div>
