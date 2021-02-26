@@ -11,7 +11,7 @@ This is the source code for New Thecnologies course project work conducted in Ou
 
 ### Server
 
-- Configure `.env` file. Create db.json into root of server folder.
+- Configure `.env` file. Create `db.json` file into root of server folder.
 
 - `$ cd server && npm install`
 
