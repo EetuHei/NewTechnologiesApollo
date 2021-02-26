@@ -18,15 +18,15 @@ const Mission = () => {
 
   return(
     <div>
-      <Grid container spacing={0} style={ { marginTop:'5%' } } justify="center">
-        <Card style={ { width: '20%' }} variant="outlined">
+      <Grid container spacing={0} style={ { marginTop:'2%' } } justify="center">
+        <Card style={ { width: '30%' }} variant="outlined">
           <CardContent>
+            <h2>Mission name: {result.data.getMissionDataById.mission_name}</h2>
             <Typography variant="subtitle2">
-              <h2>Mission name: {result.data.getMissionDataById.mission_name}</h2>
               <p><b>Manufacturer of the mission:</b> {result.data.getMissionDataById.manufacturers}</p>
               <p><b>Mission description:</b> {result.data.getMissionDataById.description}</p>
-              <p><b>Mission on Wikipedia:</b> {result.data.getMissionDataById.wikipedia}</p>
-              <p><b>Mission Website:</b> {result.data.getMissionDataById.website}</p>
+              <p><b>Mission on Wikipedia:</b> <a href={result.data.getMissionDataById.wikipedia} style={ { textDecoration: 'none', color: 'white' } }>{result.data.getMissionDataById.wikipedia}</a></p>
+              <p><b>Mission Website:</b> <a href={result.data.getMissionDataById.website} style={ { textDecoration: 'none', color: 'white' } }>{result.data.getMissionDataById.website}</a></p>
             </Typography>
             <Link to="/missions"style={ { textDecoration:'none' } }>
               <Button variant="outlined" style={ { marginRight:'3%' } }>
