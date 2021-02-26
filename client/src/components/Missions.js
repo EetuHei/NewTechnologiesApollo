@@ -9,7 +9,7 @@ const Missions = ({ missions }) => {
       <Typography variant="h5" style={ { paddingTop:'200px', paddingBottom:'100px', textAlign:'center' } }>Information about missions</Typography>
       <Grid container spacing={0} direction="row" alignContent="center" justify="center">
         {missions.map((data) => (
-          <div key={data.id}>
+          <div key={data.mission_id}>
             <Link to={`/missions/${data.mission_id}`} style={ { textDecoration:'none' } }>
               <Grid item xs={12} style={ { margin:'10px' } }>
                 <Button size ="medium" variant="contained" color="secondary">
