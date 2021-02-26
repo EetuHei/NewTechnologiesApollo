@@ -11,7 +11,18 @@ This is the source code for New Thecnologies course project work conducted in Ou
 
 ### Server
 
-- Configure `.env` file. Create `db.json` file into root of server folder.
+- Configure `.env` file.
+- Create `db.json` file into root of server folder and copy paste this: 
+`{
+    "user":
+        [
+            {
+                "username":"root",
+                "password":"",
+                "id":"123"
+            }
+        ]
+}` into it.
 
 - `$ cd server && npm install`
 
